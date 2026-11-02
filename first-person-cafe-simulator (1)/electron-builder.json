@@ -1,0 +1,41 @@
+{
+  "appId": "kr.hongdae.cafedalbit",
+  "productName": "Caf\u00e9 Dalbit",
+  "copyright": "Caf\u00e9 Dalbit \u2014 Hongdae caf\u00e9 sim",
+  "directories": {
+    "output": "release",
+    "buildResources": "build"
+  },
+  "files": [
+    "dist/**/*",
+    "electron/main.cjs",
+    "package.json"
+  ],
+  "asar": true,
+  "win": {
+    "target": [
+      "nsis"
+    ],
+    "artifactName": "CafeDalbit-Hongdae-${version}-windows-${arch}.exe"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Caf\u00e9 Dalbit (Hongdae)"
+  },
+  "linux": {
+    "target": [
+      "AppImage"
+    ],
+    "artifactName": "CafeDalbit-Hongdae-${version}-linux-${arch}.AppImage"
+  },
+  "mac": {
+    "target": [
+      "dmg"
+    ],
+    "artifactName": "CafeDalbit-Hongdae-${version}-mac-${arch}.dmg"
+  }
+}
